@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="./main.css">
-    <script src="libs\jquery.min.js"></script>
+    <script src="libs/jquery.min.js"></script>
 </head>
 
 <body>
@@ -15,43 +15,15 @@
             <div class="col-md-2">
                 <img class="img" src="./Images/Blackberry_Logo_without_wordmark.svg.png" alt="Logo">
             </div>
-            <h1 class="col-md-6 heading">
-                заглавие
+            <h1 class="col-md-8 page-header">
+                NEWS SITE
             </h1>
 
-            <div class="col-md-4 userlog">
-
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="inputEmail3" class="col-md-2 control-label">Email</label>
-                        <div class="col-md-10">
-                            <input class="form-control" id="inputEmail3" placeholder="Email" type="email">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-md-2 control-label">Password</label>
-                        <div class="col-sm-10">
-                            <input class="form-control" id="inputPassword3" placeholder="Password" type="password">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <div class="checkbox">
-                                <label>
-              <input type="checkbox"> Remember me
-            </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default">Sign in</button>
-                        </div>
-                    </div>
-                </form>
-                <a href=""> New user registration</a>
+            <div class="col-md-2 userlog">
+                    <a href="logIn.html" class="btn btn-default navbar-btn btn-sm">Вход</a>
+                    <a href="#" class="btn btn-default navbar-btn btn-sm">Нова регистрация</a>
             </div>
-        </div>
+        </div>            
 
         <div class="row">
             <div class="col-md-2">
@@ -63,29 +35,14 @@
         </div>
 
         <div class="row">
-            <div class="col-md-2">
-                <a href="#/category/bulgaria">България</a>
-            </div>
-
-            <div class="col-md-2">
-                <a href="#/category/world">Свят</a>
-            </div>
-
-            <div class="col-md-2">
-                <a href="#/category/sport">Спорт</a>
-            </div>
-
-            <div class="col-md-2">
-                <a href="#/category/health">Здраве</a>
-            </div>
-
-            <div class="col-md-2">
-                <a href="#/category/science">Наука и технологии</a>
-            </div>
-
-            <div class="col-md-2">
-                <a href="#/category/curious">Любопитно</a>
-            </div>
+            <ul class="col-md-12 nav nav-pills nav-justified">
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/bulgaria">България</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/world">Свят</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/sport">Спорт</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/health">Здраве</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/science">Наука и технологии</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/curious">Любопитно</a></li>
+            </ul>
         </div>
 
         <div id="contentContainer" class="row">

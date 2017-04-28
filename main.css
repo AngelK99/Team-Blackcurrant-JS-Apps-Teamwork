@@ -1,22 +1,21 @@
 body {
-    background-color: lightseagreen;
+    
 }
 div { 
     border: 1px solid black; 
-    color: white 
+    
 }
 
 a {
     color: white;
 }
 .form {
-    background-color:  lightgray;
     border: 1px solid black;
-    color: white;
+    
 }
 
-.btn {
-    
+.btn-primary {
+    border-radius: 0;
 }
 
 .img {
@@ -27,6 +26,6 @@ a {
 .heading {
     text-align: center;
     border: 1px solid black;
-    color: white;
+    
 }
 
