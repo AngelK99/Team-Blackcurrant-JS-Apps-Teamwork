@@ -1,0 +1,27 @@
+{
+  "name": "Team-Blackcurrant-JS-Apps-Teamwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelK99/Team-Blackcurrant-JS-Apps-Teamwork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngelK99/Team-Blackcurrant-JS-Apps-Teamwork/issues"
+  },
+  "homepage": "https://github.com/AngelK99/Team-Blackcurrant-JS-Apps-Teamwork#readme",
+  "dependencies": {
+    "handlebars": "^4.0.7",
+    "systemjs": "^0.20.12"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.24.1"
+  }
+}

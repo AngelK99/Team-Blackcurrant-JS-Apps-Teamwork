@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="./main.css">
-    <script src="libs/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules\bootstrap\dist\css\bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="./main.css"> 
 </head>
 
 <body>
@@ -20,8 +19,8 @@
             </h1>
 
             <div class="col-md-2 userlog">
-                    <a href="logIn.html" class="btn btn-default navbar-btn btn-sm">Вход</a>
-                    <a href="#" class="btn btn-default navbar-btn btn-sm">Нова регистрация</a>
+                    <a href="#user/login" class="btn btn-default navbar-btn btn-sm">Вход</a>
+                    <a href="#user/register" class="btn btn-default navbar-btn btn-sm">Нова регистрация</a>
             </div>
         </div>            
 
@@ -36,12 +35,12 @@
 
         <div class="row">
             <ul class="col-md-12 nav nav-pills nav-justified">
-                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/bulgaria">България</a></li>
-                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/world">Свят</a></li>
-                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/sport">Спорт</a></li>
-                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/health">Здраве</a></li>
-                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/science">Наука и технологии</a></li>
-                <li role="presentation" class="btn btn-group btn-primary"><a href="#/category/curious">Любопитно</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#category/bulgaria">България</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#category/world">Свят</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#category/sport">Спорт</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#category/health">Здраве</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#category/science">Наука и технологии</a></li>
+                <li role="presentation" class="btn btn-group btn-primary"><a href="#category/curious">Любопитно</a></li>
             </ul>
         </div>
 
@@ -62,8 +61,10 @@
         </div>
     </div>
 
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="scripts/router.js"></script>
-    <!--<script src="scripts/app.js"></script>-->
+    <script src="scripts/app.js"></script>
+
 </body>
 
 </html>
