@@ -18,10 +18,9 @@
   },
   "homepage": "https://github.com/AngelK99/Team-Blackcurrant-JS-Apps-Teamwork#readme",
   "dependencies": {
-    "handlebars": "^4.0.7",
-    "systemjs": "^0.20.12"
-  },
-  "devDependencies": {
-    "babel-plugin-transform-es2015-modules-systemjs": "^6.24.1"
+    "bootstrap": "^3.3.7",
+    "handlebars": "^4.0.8",
+    "jquery": "^3.2.1",
+    "simple-json-db": "^1.2.1"
   }
 }
