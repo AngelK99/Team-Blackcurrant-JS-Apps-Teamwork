@@ -5,7 +5,8 @@
 
     <link rel="stylesheet" type="text/css" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="node_modules\bootstrap\dist\css\bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="./main.css"> 
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/clock.css">
 </head>
 
 <body>
@@ -19,14 +20,21 @@
             </h1>
 
             <div class="col-md-2 userlog">
-                    <a href="#user/login" class="btn btn-default navbar-btn btn-sm">Вход</a>
-                    <a href="#user/register" class="btn btn-default navbar-btn btn-sm">Нова регистрация</a>
+                <a href="#user/login" class="btn btn-default navbar-btn btn-sm">Вход</a>
+                <a href="#user/register" class="btn btn-default navbar-btn btn-sm">Регистрация</a>
             </div>
-        </div>            
+        </div>
 
         <div class="row">
-            <div class="col-md-2">
-                Weather forecast container / Calendar or something like this
+            <div class="col-md-2 clock">
+                <div id="Date"></div>
+                <ul>
+                    <li id="hours"></li>
+                    <li id="point">:</li>
+                    <li id="min"></li>
+                    <li id="point">:</li>
+                    <li id="sec"></li>
+                </ul>
             </div>
             <div class="col-md-10">
                 Sliding bar with latest news (right to left direction)
@@ -62,8 +70,8 @@
     </div>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/simple-json-db/dist/jsondb.js"></script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="scripts/clock.js"></script>
     <script src="scripts/pageController.js"></script>
     <script src="scripts/router.js"></script>
     <script src="scripts/app.js"></script>
