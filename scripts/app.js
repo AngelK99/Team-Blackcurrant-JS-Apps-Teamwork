@@ -11,4 +11,4 @@ router
   .when('user/login',  () => LoadLoginPage())
   .when('user/register',  () => Test());
 
-$(window).on('hashchange', () => router.navigate());
+$(window).on('hashchange', () => router.navigate(location.hash.slice(1)));

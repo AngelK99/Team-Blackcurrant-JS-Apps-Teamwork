@@ -1,5 +1,5 @@
-class Router{
-    constructor() {
+class Router {
+  constructor() {
     this._routes = [];
   }
 
@@ -12,12 +12,10 @@ class Router{
     return this;
   }
 
-  navigate() {
-    const currentUrl = location.hash.slice(1);
-
-    for(const {targetUrl, callback} of this._routes) {
+  navigate(currentUrl) {
+    for (const { targetUrl, callback } of this._routes) {
       const areMatching = Router.matchUrls(currentUrl, targetUrl);
-      if(areMatching) {
+      if (areMatching) {
         callback();
         break;
       }
@@ -25,13 +23,11 @@ class Router{
   }
 
   static matchUrls(currentUrl, targetUrl) {
-      if(currentUrl === targetUrl) {
-        return true;
-      }
-      else {
-        return false;
-      }
+    if (currentUrl === targetUrl) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }
-
-// export { Router };
