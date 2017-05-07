@@ -9,6 +9,12 @@ div {
 a {
     color: white;
 }
+a.footer-author {
+    color: darkblue;
+}
+a.footer-share {
+    color: darkblue;
+}
 .form {
     border: 1px solid black;
     
