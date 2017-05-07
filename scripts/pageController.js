@@ -13,26 +13,23 @@ function LogIn() {
 }
 
 function LoadLoginPage() {
-    $.get('templates/logInForm.handlebars', function (data) {
+    $.get('templates/log.handlebars', function (data) {
         var template = Handlebars.compile(data);
         $container.html(template);
-    }, 'html')
+    }, 'html').then(function () {
+        $('#signInBtn').on('click', function (event) {
+            let email = $("#inputEmail3").val();
+            let password = $("#inputPassword3").val();
 
-    jQuery(document.body).on('click', '#signInBtn', function (event) {
-        let email = $("#inputEmail3").val();
-        let password = $("#inputPassword3").val();
-        //alert(`Email: ${email} Pass: ${password}`);
-
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert(errorMessage);
-        // ...
-    });
-    });
-
-    
+            firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert(errorMessage);
+                // ...
+            });
+        });        
+    })
 }
 
 function LoadNews(category) {
