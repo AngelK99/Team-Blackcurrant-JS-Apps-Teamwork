@@ -9,6 +9,6 @@ router
   .when('category/health',  () => LoadNews('health'))
   .when('category/curious',  () => LoadNews('curious'))
   .when('user/login',  () => LoadLoginPage())
-  .when('user/register',  () => Test());
+  .when('user/register',  () => LoadRegPage());
 
 $(window).on('hashchange', () => router.navigate(location.hash.slice(1)));
