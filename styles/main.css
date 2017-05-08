@@ -1,9 +1,9 @@
-body {
-    
+div.container, div.row { 
+    border: 1px solid black;    
 }
-div { 
-    border: 1px solid black; 
-    
+
+div#contentContainer{
+    text-align: center;
 }
 
 a {

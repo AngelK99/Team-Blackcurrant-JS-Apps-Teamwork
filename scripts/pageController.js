@@ -1,5 +1,5 @@
 function LoadLoginPage() {
-    $.get('templates/log.handlebars', function (data) {
+    $.get('templates/loginForm.hbs', function (data) {
         var template = Handlebars.compile(data);
         $container.html(template);
     }, 'html').then(function () {
