@@ -5,12 +5,12 @@ firebase.auth().onAuthStateChanged(function (user) {
       $("#logOut").on("click", function () {
         firebase.auth().signOut();
       })
-      alert("signed in!")
+      alert("Signed in!")
       window.location.hash ='#category/bulgaria';
 
   }
   else {
-    alert("Logged out successfully!");
+    // alert("Logged out successfully!");
     window.location.hash = '#category/bulgaria';
     $(".userlog").html(`<a href="#user/login" class="btn btn-default navbar-btn btn-sm">Вход</a>
                         <a href="#user/register" class="btn btn-default navbar-btn btn-sm">Регистрация</a>`);
