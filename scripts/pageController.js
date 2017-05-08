@@ -7,40 +7,50 @@ function LoadLoginPage() {
             let email = $("#inputEmail3").val();
             let password = $("#inputPassword3").val();
 
-            firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
-                // Handle Errors here.
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                alert(errorMessage);
-                // ...
-            });
+            if (password.length < 6) {
+                alert("Invalid password! Password is at least 6 symbols!");
+            }
+            else {
+                firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    alert(errorMessage);
+                });
+            }
         });
     })
 }
 
 function LoadRegPage() {
-    $.get('templates/reg.hbs', function (data) {
+    $.get('templates/regForm.hbs', function (data) {
         var template = Handlebars.compile(data);
         $container.html(template);
     }, 'html').then(function () {
         $('#register').on('click', function (event) {
-            let email = $("#username").val();
+            let email = $("#email").val();
             let password = $("#password").val();
             let passwordC = $("#password_confirm").val();
 
-            if (password === passwordC) {
-                firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-                    // Handle Errors here.
-                    var errorCode = error.code;
-                    var errorMessage = error.message;
-                    // ...
-                })
-
-                alert("Registration Successful! Please Log in!")
-                window.location.hash = "#category/bulgaria"
+            if (password.length < 6) {
+                alert("Password too short! Must be at least 6 symbols!");
             }
             else {
-                alert("Passwords doesn't match!")
+                if (password === passwordC) {
+                    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        if (errorCode == 'auth/weak-password') {
+                            alert('The password is too weak.');
+                        } else {
+                            alert(errorMessage);
+                        }
+                    })
+                    window.location.hash = "#category/bulgaria"
+                }
+                else {
+                    alert("Passwords doesn't match!")
+                }
+
             }
         });
     })
