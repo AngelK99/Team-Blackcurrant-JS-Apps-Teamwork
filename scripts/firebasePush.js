@@ -1,28 +1,26 @@
 'use strict'; 
 
-var firebase = require("firebase"); //error: require is not a function; 
-                                    //console.log(firebase) logs 'undefined' -> not working;
+var database = firebase.database();
 
-var database = firebase.database(); //instance
+function writeNewPost(uid, picture, title, body) {
+  // A post entry.
+  var postNews = {
+    uid: uid,
+    content: body,
+    title: title,
+    news_picture: picture
+  };
 
+   
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().child('news').push().key;
 
-//should use one of the two below
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  var updates = {};
+  updates['/team-blackcurrant-news-site/' + newPostKey] = postNews;
+  updates['/team-blackcurrant-news-site/' + uid + '/' + newPostKey] = postNews;
 
-// write in database 
-// function writeNews(heading, text, imageUrl) {
-//   firebase.database().ref('news/').set({
-//     title: heading,
-//     content: text,
-//     news_picture : imageUrl
-//   });
-// }
+  return firebase.database().ref().update(updates);
+}
 
-//add to database list
-var ref = firebase.app().database().ref();
-var news = ref.child('news');
-var newPublication = news.push({
-    title: 'heading',
-    content: 'text',
-    news_picture: 'imageUrl'
-});
 
