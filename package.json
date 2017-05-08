@@ -19,6 +19,7 @@
   "homepage": "https://github.com/AngelK99/Team-Blackcurrant-JS-Apps-Teamwork#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "firebase": "^3.9.0",
     "handlebars": "^4.0.8",
     "jquery": "^3.2.1",
     "simple-json-db": "^1.2.1"
