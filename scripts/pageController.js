@@ -57,8 +57,14 @@ function LoadRegPage() {
 }
 
 function LoadNews(category) {
-    $container.html(`<h1>SUCCESS FOR ${category}</h1>`);
+    let $content = $('<img >');
 
+    $content.attr("id",`contentImg`);
+    $content.attr("src",`../imgs/${category}.jpg`);
+
+
+    $('#contentContainer').html("");
+    $('#contentContainer').append($content);
 
 }
 
